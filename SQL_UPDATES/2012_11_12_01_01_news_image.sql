@@ -1,0 +1,1 @@
+ALTER TABLE `website_news` ADD COLUMN `bigthumbnailPath` MEDIUMTEXT NOT NULL AFTER `thumbnailPath`;
