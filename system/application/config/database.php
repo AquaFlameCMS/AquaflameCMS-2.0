@@ -36,13 +36,13 @@
 
 $db['characters']['hostname'] = "127.0.0.1";
 $db['characters']['username'] = "root";
-$db['characters']['password'] = "d3v3l0per";
+$db['characters']['password'] = "password";
 $db['characters']['database'] = "characters";
 $db['characters']['dbdriver'] = "mysql";
 
 $db['default']['hostname'] = "127.0.0.1";
 $db['default']['username'] = "root";
-$db['default']['password'] = "d3v3l0per";
+$db['default']['password'] = "password";
 $db['default']['database'] = "auth";
 $db['default']['dbdriver'] = "mysql";
 
