@@ -21,7 +21,7 @@
 					</header>
 			<span class="clear"><!-- --></span>
 			<div class="header-image">
-				<center><img a src="<?php echo base_url()."/".$article->getThumbnail();?>" /></center>
+				<center><img a src="<?php echo base_url()."/".$article->getImage();?>" /></center>
 			</div>
             <div class="content">
 			<br/>
