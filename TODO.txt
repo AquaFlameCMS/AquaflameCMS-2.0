@@ -1,0 +1,12 @@
+====AquaFlameCMS 2.0====
+
+1) Fix the News completely + Images
+2) Correct Comments
+3) Make the Media Page
+4) Make the Account Panel Page
+5) Make the Forums Page
+6) Make the Status Page
+7) Make the Services Page
+8) Make the Community Page
+
+Configure and optimize the website for Mangos & Trinity
