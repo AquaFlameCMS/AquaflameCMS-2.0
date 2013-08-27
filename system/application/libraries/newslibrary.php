@@ -63,8 +63,10 @@ class NewsLibrary
         foreach($this->getCI()->news->fetchAllNews($maxArticles) as $article)
         {
 		
-			if(strlen($article->getContent()) > 200) $text = substr($article->getContent(), 0, 390)."...";
-			else $text = $article->getContent();
+			if(strlen($article->getContent()) > 200) 
+                $text = substr($article->getContent(), 0, 390)."...";
+			else 
+                $text = $article->getContent();
 		
             echo '<article>
                 	<header>

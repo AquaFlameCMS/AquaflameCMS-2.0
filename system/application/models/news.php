@@ -5,6 +5,7 @@ class Article
     private $_Title;
     private $_Content;
     private $_Thumbnail;
+    private $_Image;
     private $_Date;
     private $_Author;
     private $_Visits;
@@ -61,6 +62,17 @@ class Article
     public function setThumbnail($Thumbnail)
     {
         $this->_Thumbnail = (string)$Thumbnail;
+        return $this;
+    }
+    
+    public function getImage()
+    {
+        return $this->_Image;
+    }
+    
+    public function setImage($path)
+    {
+        $this->_Image = (string)$path;
         return $this;
     }
     
@@ -146,7 +158,7 @@ class News extends Model
     
     public function fetchArticleById($id)
     {
-        $this->db->select('name, content, thumbnailPath, datePosted, author, visits')->where('id',(int)$id);
+        $this->db->select('name, content, imagePath, datePosted, author, visits')->where('id',(int)$id);
         $query = $this->db->get('website_news');
         if($query->rowCount() > 0)
         {
@@ -155,7 +167,7 @@ class News extends Model
             $article->setTitle($row->name)
                     ->setID($id)
                     ->setContent($row->content)
-                    ->setThumbnail($row->thumbnailPath)
+                    ->setImage($row->imagePath)
                     ->setDate($row->datePosted)
                     ->setVisits($row->visits)
                     ->setAuthor($row->author);
