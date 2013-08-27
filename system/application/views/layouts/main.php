@@ -138,7 +138,7 @@
                                         <div id="user_control_deco">
                                                 <!-- -->
                                         </div>
-                                        <p>Welcome,<span> '. $username . '</span><br /><span>Characters 0</span></p>
+                                        <p>Welcome,<span> '. strtolower($username) . '</span><br /><span>Characters '.$numchars.'</span></p>
                                 </a><p>';
                                 }else{
                                         echo '<a data-toggle="modal" href="#loginframe">

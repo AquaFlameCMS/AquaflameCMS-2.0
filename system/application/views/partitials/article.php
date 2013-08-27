@@ -32,45 +32,9 @@
 			</article>
 		<article>
 		<header>
-		<div class="reply-navigation">
-			<a href=""><span>Add a Reply</span></a>
+		<div class="reply-navigation" id="show-reply">
+			<a href="#"><span>Add a Reply</span></a>
         </div>
-		<div class="new-post">
-													<div class="comment">
-														<div class="portrait-b ajax-update">
-															<div class="avatar-interior">
-															<a href="#"><img height="64" width="64" src="images/avatars/2d/eagle.gif" alt=""></a>
-															</div>
-														</div>
-														
-														<div class="comment-interior">
-															<div class="character-info user ajax-update">
-																<!--commentThrottle[]-->
-																<div class="user-name">
-																<a href="#" class="context-link" rel="np">Alex</a>
-																</div>
-															</div>
-															
-															<div class="content">
-																<div class="comment-ta">
-																	<textarea id="comment-ta" cols="78" rows="3" name="detail" onfocus="textAreaFocused = true;" onblur="textAreaFocused = false;"></textarea>
-																</div>
-																<div class="action">
-																	<div class="cancel">
-																				<span class="spacer">|</span>
-																				<a href="javascript:;" onclick="$('#comment-form-reply').slideUp();">Cancel</a>
-																	</div>
-																	<div class="submit">
-																	<div class="reply-navigation">
-																		<a href=""><span>POST</span></a>
-																	</div>
-																	</div>
-																	<span class="clear"><!-- --></span>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
 		<?php        
         if($hasComments)
         {
@@ -109,6 +73,42 @@
             }
         }
         ?>
+        <div class="new-post">
+            <div class="comment">
+                <div class="portrait-b ajax-update">
+                    <div class="avatar-interior">
+                        <a href="#"><img height="64" width="64" src="images/avatars/2d/eagle.gif" alt=""></a>
+                    </div>
+                </div>
+														
+                <div class="comment-interior">
+                    <div class="character-info user ajax-update">
+                    <!--commentThrottle[]-->
+                        <div class="user-name">
+                            <a href="#" class="context-link" rel="np">Alex</a>
+                        </div>
+                </div>
+															
+                <div class="content">
+                    <div class="comment-ta">
+                        <textarea id="comment-ta" cols="78" rows="3" name="detail" onfocus="textAreaFocused = true;" onblur="textAreaFocused = false;"></textarea>
+                    </div>
+                        <div class="action">
+                            <div class="cancel">
+                                <span class="spacer">|</span>
+                                <a href="javascript:;" onclick="$('#comment-form-reply').slideUp();">Cancel</a>
+                            </div>
+                            <div class="submit">
+                                <div class="reply-navigation" id="submit-comment">
+                                    <a href="#"><span>POST</span></a>
+                                </div>
+                            </div>
+                            <span class="clear"><!-- --></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 		</header>
 		</article>
 		</div>

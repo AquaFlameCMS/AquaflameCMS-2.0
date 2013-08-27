@@ -123,6 +123,6 @@ class Account extends Model
                 return 0x01;
             }
         }
-    }
+    }   
 }
 ?>

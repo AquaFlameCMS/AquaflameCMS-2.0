@@ -98,5 +98,23 @@ class Characters extends Model
             return $character;
         }
     }
+    
+    public function getCharactersNum($userid)
+    {
+        $this->db->select('1')->where('account',$userid);
+        $result = $this->db->get('characters');
+        return $result->rowCount();
+    }
+    
+    public function getFirstCharacter($userid)
+    {
+        $this->db->select('guid')->where('account',$userid)->limit(1);
+        $result = $this->db->get('characters');
+        if($result->rowCount() > 0){
+            return $this->db->fetch($result)->guid;
+        }else{
+            return 0;
+        }
+    }
 }
 ?>

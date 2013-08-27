@@ -31,6 +31,7 @@ class Controller extends CI_Base {
 
 	var $_ci_scaffolding	= FALSE;
 	var $_ci_scaff_table	= FALSE;
+    protected $_viewData    = array();
 	
 	/**
 	 * Constructor
@@ -118,6 +119,16 @@ class Controller extends CI_Base {
 		$scaff = new Scaffolding($this->_ci_scaff_table);
 		$scaff->$method();
 	}
+    
+    public function addViewData($key,$data)
+    {
+        $this->_viewData[$key] = $data;
+    }
+    
+    public function getViewData($key)
+    {
+        return $this->_viewData[$key];
+    }
 
 
 }

@@ -10,7 +10,12 @@
 |
 */
 
-
+$hook['post_controller_constructor']=array(
+                                    'class' => 'AccountInfo',
+                                    'function' => 'Load',
+                                    'filename' => 'GetAccountInfo.php',
+                                    'filepath' => 'hooks',
+                                    'params' => array());
 
 /* End of file hooks.php */
 /* Location: ./system/application/config/hooks.php */

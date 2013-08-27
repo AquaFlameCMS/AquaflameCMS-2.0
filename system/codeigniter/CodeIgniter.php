@@ -105,7 +105,7 @@ $OUT =& load_class('Output');
  * ------------------------------------------------------
  */
 
-if ($EXT->_call_hook('cache_override') === FALSE)
+if ($EXT->_call_hook('cache_override',NULL) === FALSE)
 {
 	if ($OUT->_display_cache($CFG, $URI) == TRUE)
 	{

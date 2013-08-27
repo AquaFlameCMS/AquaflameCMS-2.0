@@ -201,7 +201,7 @@ ul.screanshots-media-page-two li { width: 160px; height: 91px; margin: 0 27px 27
 #main #main_content article header .wow-class-11, .wow-class-11 a { color: #ff7c0a; }
 #main #main_content article header .time a { color: #EFC9A0; font: normal 12px/1.5 Arial, Verdana, sans-serif; }
 #main #main_content article header .reply-content { padding-top: 8px; word-wrap: break-word; }
-#main #main_content .new-post { padding: 0; margin-bottom: 15px; }
+#main #main_content .new-post { padding: 0; margin-bottom: 15px; display: none;}
 /* Comments */
 #comments-page .title { font-size:21px; padding:8px 15px; font-weight:normal;  }
 #main #main_content { clear:both; margin-top:20px; padding:20px 0 65px; font-family:Verdana, Geneva, sans-serif; background-repeat:no-repeat; background-position:50% 0; }
