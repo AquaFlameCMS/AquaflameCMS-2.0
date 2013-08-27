@@ -1,12 +1,22 @@
 ====AquaFlameCMS 2.0====
 
-1) Fix the News completely + Images
+1) Fix the News completely + Images 
+(Big image is not showing when clicking on the News)
 2) Correct Comments
+(Unknown Reason)
 3) Make the Media Page
+(HTML + PHP needs to be made)
 4) Make the Account Panel Page
+(HTML + PHP needs to be made)
 5) Make the Forums Page
+(HTML + PHP needs to be made)
 6) Make the Status Page
+(HTML + PHP needs to be made)
 7) Make the Services Page
+(HTML + PHP needs to be made)
 8) Make the Community Page
+(HTML + PHP needs to be made)
+9) Make an installation process so people can configure it easy
+(HTML + PHP needs to be made)
 
 Configure and optimize the website for Mangos & Trinity
