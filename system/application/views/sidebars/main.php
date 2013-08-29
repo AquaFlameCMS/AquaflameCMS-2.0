@@ -1,19 +1,3 @@
-<div id="sidebar">
-    <div id="user_control">
-    <?php
-    if($loggedIn){
-        echo '<a href="#">
-                <div id="user_control_deco"><!-- -->
-                </div>
-                <p>Welcome,<span> '. strtolower($username) . '</span><br /><span>Characters '.$numchars.'</span></p></a><p>';
-    }else{
-        echo '<a data-toggle="modal" href="#loginframe">
-                <div id="user_control_deco"><!-- -->
-                </div>
-                <p><span>Log in now</span> to enhance and<br />personalize your experience!</p></a>';
-    }
-    ?>
-    </div>
     <div id="sidebar_content" class="clearfix">
         <section class="advertisement">
             <img src="<?php echo base_url();?>assets/images/test/advertisement.png" alt="">
@@ -71,4 +55,3 @@
             </footer>
         </section>
     </div>
-</div>

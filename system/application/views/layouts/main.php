@@ -141,9 +141,26 @@
             <?php
             // here we load the correct view
             $this->load->view($subview,$subviewData);
-            echo "</div>";
-            $this->load->view($sidepanel,$subviewData);
             ?>
+        </div>
+        <div id="sidebar">
+            <div id="user_control">
+                <?php
+                    if($loggedIn){
+                        echo '<a href="#">
+                                <div id="user_control_deco"><!-- --></div>
+                                <p>Welcome,<span> '. strtolower($username) . '</span><br /><span>Characters '.$numchars.'</span></p></a><p>';
+                    }else{
+                        echo '<a data-toggle="modal" href="#loginframe">
+                                <div id="user_control_deco"><!-- --></div>
+                                <p><span>Log in now</span> to enhance and<br />personalize your experience!</p></a>';
+                    }
+                ?>
+            </div>
+        <?php
+        $this->load->view($sidepanel,$subviewData);
+        ?>
+        </div>
         </div>
         <footer>
         <div id="lower_nav" class="clearfix">
