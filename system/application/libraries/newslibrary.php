@@ -72,11 +72,11 @@ class NewsLibrary
             echo '<article>
                 	<header>
                     	<h1><a href="'.base_url().'index.php/index/viewarticle/'.$article->getID().'">'.$article->getTitle().'</a></h1>
-                        <p class="meta">by <a href="">'.$article->getAuthor().'</a> '.$this->_getTimeAgo($article->getDate()).' <a href="">'.$this->getCI()->comments->checkForComments(Comment::TYPE_ARTICLE,$article->getID()).'</a> <img src="'.base_url().'/assets/images/content-comments.png" alt="Comments" /></p>
+                        <p class="meta">by <a href="">'.$article->getAuthor().'</a> '.$this->_getTimeAgo($article->getDate()).' <a href="">'.$this->getCI()->comments->checkForComments(Comment::TYPE_ARTICLE,$article->getID()).'</a> <img src="'.base_url().'assets/images/content-comments.png" alt="Comments" /></p>
                     </header>
                     <div class="content">
                     	<div class="thumb">
-                        	<a href="'.base_url().'index.php/index/viewarticle/'.$article->getID().'"><img src="'.$article->getThumbnail().'" alt="" /></a>
+                        	<a href="'.base_url().'index.php/index/viewarticle/'.$article->getID().'"><img src="'.base_url().$article->getThumbnail().'" alt="" /></a>
                         </div>
                     	<p>'.$text.'</p>
 						<div align="right"><a href="'.base_url().'index.php/index/viewarticle/'.$article->getID().'" class="login-btn">Read More</a></div>
@@ -98,7 +98,7 @@ class NewsLibrary
         {
             echo '<li>
                     <a href="index.php/index/viewarticle/'.$article->getID().'">
-                        <img src="" alt="" style="background-image: url('.$article->getThumbnail().');" />
+                        <img src="" alt="" style="background-image: url('.base_url().$article->getThumbnail().');" />
                         <span>'.$article->getTitle().'</span>
                     </a>
                   </li>';
@@ -125,9 +125,9 @@ class NewsLibrary
                                     <td>'.$article->getThumbnail().'</td>
                                     <td>
                                         <!-- Icons -->
-                                        <a href="#" title="Edit"><img src="'.base_url().'/assets/admin/images/icons/pencil.png" alt="Edit" /></a>
-                                        <a href="#" title="Delete"><img src="'.base_url().'/assets/admin/images/icons/cross.png" alt="Delete" /></a> 
-                                        <a href="#" title="Edit Meta"><img src="'.base_url().'/assets/admin/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+                                        <a href="#" title="Edit"><img src="'.base_url().'assets/admin/images/icons/pencil.png" alt="Edit" /></a>
+                                        <a href="#" title="Delete"><img src="'.base_url().'assets/admin/images/icons/cross.png" alt="Delete" /></a> 
+                                        <a href="#" title="Edit Meta"><img src="'.base_url().'assets/admin/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
                                     </td>
                                 </tr>';
         }

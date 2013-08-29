@@ -4,6 +4,7 @@ class Index extends Controller
     public function __construct()
     {
         parent::Controller();
+        $this->addViewData("sidepanel","sidebars/main");
     }
     
 	public function index()

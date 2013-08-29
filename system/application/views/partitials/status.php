@@ -1,17 +1,3 @@
-<div id="content" class="clearfix">
-        <div id="main">
-        	<div id="main_navigation">
-            	<nav>
-                	<ul>
-                    	<li><a class="home" href=""><span>Home</span></a></li>
-                        <li><a class="media" href=""><span>Media</span></a></li>
-                        <li><a class="community" href=""><span>Community</span></a></li>
-                        <li><a class="status" href=""><span>Status</span></a></li>
-                        <li><a class="forums" href=""><span>Forums</span></a></li>
-                        <li><a class="services" href=""><span>Services</span></a></li>
-                    </ul>
-                </nav>
-            </div>
             <div id="main_content">
 			<div id="status">
 			<div class="section-title">
