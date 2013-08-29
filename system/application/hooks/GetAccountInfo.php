@@ -23,10 +23,11 @@ class AccountInfo
                 $this->_CI->session->set_userdata(array("characterID" => $this->_CI->characters->getFirstCharacter($this->_CI->session->userdata("userId"))));
             }
             $this->_CI->addViewData('characterID',$this->_CI->session->userdata("characterID"));
+            $this->_CI->addViewData('subviewData',array("activeChar" => $this->_CI->characters->getChararcterById($this->_CI->session->userdata("characterID"))));
        }else{
             $this->_CI->addViewData('loggedIn',FALSE);
+            $this->_CI->addViewData('subviewData',array());
        }
-       $this->_CI->addViewData('subviewData',array("activeChar" => $this->_CI->characters->getChararcterById($this->_CI->session->userdata("characterID"))));
     }
 }
 ?>
