@@ -137,9 +137,7 @@
                     </ul>
                 </nav>
             </div>
-   
             <?php
-            // here we load the correct view
             $this->load->view($subview,$subviewData);
             ?>
         </div>
@@ -157,59 +155,59 @@
                     }
                 ?>
             </div>
-        <?php
-        $this->load->view($sidepanel,$subviewData);
-        ?>
+            <?php
+            $this->load->view($sidepanel,$subviewData);
+            ?>
         </div>
-        </div>
-        <footer>
-        <div id="lower_nav" class="clearfix">
-            <nav>
-                <ul>
-                    <li class="header">AquaFlame Home</li>
-                    <li><a href="">Whats AquaFlame?</a></li>
-                    <li><a href="">Donate for us</a></li>
-                    <li><a href="">Account Panel</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Make free account</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li class="header">Account</li>
-                    <li><a href="">Forgot Password?</a></li>
-                    <li><a href="">Go Premium/Vip</a></li>
-                    <li><a href="">Forum User CP</a></li>
-                    <li><a href="">Game User CP</a></li>
-                    <li><a href="">Report Abuse</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li class="header">Support</li>
-                    <li><a href="">OMFG I got hacked</a></li>
-                    <li><a href="">Banned, why?</a></li>
-                    <li><a href="">Forums</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Rules</a></li>
-                </ul>
-            </nav>
-            <div id="logos">
-                <a href=""><span>AquaFlameCMS</span></a>
-                <a class="id820" href=""><span>ID820</span></a>
-            </div>
-        </div>
-        <div id="credits">
-            <nav class="pull-right">
-                <ul>
-                    <li><a href="">Terms of Use</a></li>
-                    <li><a href="">Legal</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                </ul>
-            </nav>
-            &copy; 2012 AquaFlame, INC. All rights reserved
-        </div>
-        </footer>
     </div>
+    <footer>
+    <div id="lower_nav" class="clearfix">
+    <nav>
+        <ul>
+            <li class="header">AquaFlame Home</li>
+            <li><a href="">Whats AquaFlame?</a></li>
+            <li><a href="">Donate for us</a></li>
+            <li><a href="">Account Panel</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Make free account</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li class="header">Account</li>
+            <li><a href="">Forgot Password?</a></li>
+            <li><a href="">Go Premium/Vip</a></li>
+            <li><a href="">Forum User CP</a></li>
+            <li><a href="">Game User CP</a></li>
+            <li><a href="">Report Abuse</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li class="header">Support</li>
+            <li><a href="">OMFG I got hacked</a></li>
+            <li><a href="">Banned, why?</a></li>
+            <li><a href="<?php echo base_url()."index.php/forum"?>">Forums</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Rules</a></li>
+        </ul>
+    </nav>
+        <div id="logos">
+        <a href="http://aquaflame.org/"><span>AquaFlameCMS</span></a>
+        <a class="id820" href=""><span>ID820</span></a>
+        </div>
+    </div>
+    <div id="credits">
+        <nav class="pull-right">
+            <ul>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Legal</a></li>
+                <li><a href="">Privacy Policy</a></li>
+            </ul>
+        </nav>
+            &copy; 2012 AquaFlame, INC. All rights reserved
+    </div>
+    </footer>
+</div>
 </body>
 </html>

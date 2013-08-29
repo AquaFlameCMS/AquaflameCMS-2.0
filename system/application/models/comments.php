@@ -89,7 +89,6 @@ class Comments extends Model
     
     public function addComment($characterId,$objectId,$objectType,$text)
     {
-        //$query = $this->db->query("INSERT INTO `website_comments` (`character_id`, `object_id`, `object_type`, `content`, `date_posted`) VALUES (".mysql_real_escape_string($characterId).", ".mysql_real_escape_string($objectId).", ".mysql_real_escape_string($objectType).", '".mysql_real_escape_string($text)."', (SELECT NOW()))");
         $this->db->set("character_id",$characterId);
         $this->db->set("object_id", $objectId);
         $this->db->set("object_type",$objectType);

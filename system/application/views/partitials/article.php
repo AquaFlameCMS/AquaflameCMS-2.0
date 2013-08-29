@@ -7,7 +7,7 @@
 			</header>
         <span class="clear"><!-- --></span>
         <div class="header-image">
-            <center><img a src="<?php echo base_url()."/".$article->getImage();?>" /></center>
+            <center><img src="<?php echo base_url().$article->getImage();?>" /></center>
         </div>
         <div class="content">
             <br/>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="rate">
                         <div class="rate-feedback">';
-                echo $loggedIn ? 'here should be the rating' : '<a href="?login">Login</a> to rate';
+                echo $loggedIn ? 'here should be the rating' : '<a data-toggle="modal" href="#loginframe">Login </a>to rate';
                 echo '</div>
                     <span class="clear"><!-- --></span>
                     </div>
