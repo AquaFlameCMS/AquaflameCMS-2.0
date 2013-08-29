@@ -7,15 +7,15 @@ $(document).ready(function(){
             });
             
         request.done(function(msg){
-            if (msg == "")
+            if (msg == 0x01)
             {
                 window.location.reload();
             }
-            else if (msg == "1")
+            else if (msg == 0x02)
             {
                 alert("Wrong or non-existant username, please try again");
             }
-            else if (msg == "2")
+            else if (msg == 0x03)
             {
                 alert("Wrong password, the password, as well as the username, are case sensitive");
             }
