@@ -83,12 +83,13 @@ abstract class DB_Driver
     
     public function fetch($stmn)
     {
-        return $this->_fetch($stmn);
+        return $stmn->fetch(PDO::FETCH_LAZY);
     }
     
     public function fetchAll($stmn)
     {
-        return $this->_fetch($stmn);
+        include_once(BASEPATH.'database/db_rowset'.EXT);
+        return new DB_Rowset($stmn->fetchAll(PDO::FETCH_OBJ));
     }
     
     public function find($stmn,$field,$value)

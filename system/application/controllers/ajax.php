@@ -46,6 +46,19 @@ class Ajax extends Controller
         $articles = $this->newslibrary->fetchArticlesAdmin($page);
         echo $articles->getBuffer();
     }
+    
+    public function submitcomment()
+    {
+        if($this->input->post('id') && $this->input->post('text') && $this->input->post('type') && $this->session->userdata("userId")){
+              $this->load->model('comments');
+              if($this->comments->addComment($this->session->userdata("characterID"),$this->input->post('id'),$this->input->post('type'),$this->input->post('text')))    
+                echo 0x01;
+              else  
+                echo 0x02;
+        }else{
+            echo 0x03;
+        }
+    }
 }
 
 ?>

@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 class AccountInfo
 {
@@ -20,15 +20,13 @@ class AccountInfo
             $this->_CI->addViewData('numchars',$this->_CI->characters->getCharactersNum($this->_CI->session->userdata("userId")));
             if(!$this->_CI->session->userdata("characterID") && $this->_CI->getViewData('numchars') > 0)
             {
-                $this->_CI->session->set_userdata(array("characterID" => $this->characters->getFirstCharacter($this->session->userdata("userId"))));
+                $this->_CI->session->set_userdata(array("characterID" => $this->_CI->characters->getFirstCharacter($this->_CI->session->userdata("userId"))));
             }
             $this->_CI->addViewData('characterID',$this->_CI->session->userdata("characterID"));
-       }
-       else
-       {
+       }else{
             $this->_CI->addViewData('loggedIn',FALSE);
        }
-       $this->_CI->addViewData('subviewData',array());
+       $this->_CI->addViewData('subviewData',array("activeChar" => $this->_CI->characters->getChararcterById($this->_CI->session->userdata("characterID"))));
     }
 }
 ?>

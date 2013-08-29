@@ -59,6 +59,7 @@ class NewsLibrary
     public function fetchLatestNews($maxArticles = 5)
     {
         $this->getCI()->load->model('news');
+        $this->getCI()->load->model('comments');
         ob_start();
         foreach($this->getCI()->news->fetchAllNews($maxArticles) as $article)
         {
@@ -71,7 +72,7 @@ class NewsLibrary
             echo '<article>
                 	<header>
                     	<h1><a href="'.base_url().'index.php/index/viewarticle/'.$article->getID().'">'.$article->getTitle().'</a></h1>
-                        <p class="meta">by <a href="">'.$article->getAuthor().'</a> '.$this->_getTimeAgo($article->getDate()).' <a href="">0</a> <img src="'.base_url().'/assets/images/content-comments.png" alt="Comments" /></p>
+                        <p class="meta">by <a href="">'.$article->getAuthor().'</a> '.$this->_getTimeAgo($article->getDate()).' <a href="">'.$this->getCI()->comments->checkForComments(Comment::TYPE_ARTICLE,$article->getID()).'</a> <img src="'.base_url().'/assets/images/content-comments.png" alt="Comments" /></p>
                     </header>
                     <div class="content">
                     	<div class="thumb">

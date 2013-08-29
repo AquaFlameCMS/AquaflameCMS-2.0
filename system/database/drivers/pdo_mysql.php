@@ -98,5 +98,26 @@ class DB_Driver_Mysql extends DB_Active_Record
 		
 		return $sql."LIMIT ".$offset.$limit;
 	}
+    
+    protected function _insert($tableName, $fields, $values)
+    {
+        $sql = 'INSERT INTO `'.$tableName.'` (';
+        for($i = 0; $i < count($fields);++$i)
+        {
+            $sql .= str_replace("'","`",$fields[$i]);
+            if(!($i == (count($fields) - 1)))
+                $sql = $sql.', ';
+        }
+        str_replace("'","`",$sql);
+        $sql .= ') VALUES (';
+        for($i = 0; $i < count($values);++$i)
+        {
+            $sql .= '"'.str_replace("'","",$values[$i]).'"';
+            if(!($i == (count($values) - 1)))
+                $sql .= ', ';
+        }
+        $sql .= ');';
+        return $sql;
+    }
 }
 ?>

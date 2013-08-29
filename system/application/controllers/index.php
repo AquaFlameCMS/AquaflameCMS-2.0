@@ -25,7 +25,7 @@ class Index extends Controller
         $id = (int)$id;
         if($id > 0)
         {
-            $subviewData = array();
+            $subviewData = $this->_viewData['subviewData'];
             $subviewData['article'] = $this->news->fetchArticleById($id);
             if($this->comments->checkForComments(Comment::TYPE_ARTICLE,$id) > 0){
                 $charactersContainer = array();

@@ -1178,8 +1178,8 @@ class DB_Active_Record extends DB_Driver
 			$table = $this->ar_from[0];
 		}
 
-		$sql = $this->_insert($this->_protect_identifiers($table, TRUE, NULL, FALSE), array_keys($this->ar_set), array_values($this->ar_set));
-		
+		$sql = $this->_insert($table, array_keys($this->ar_set), array_values($this->ar_set));
+        
 		$this->_reset_write();
 		return $this->query($sql);		
 	}

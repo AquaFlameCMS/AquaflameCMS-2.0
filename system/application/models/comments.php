@@ -89,8 +89,13 @@ class Comments extends Model
     
     public function addComment($characterId,$objectId,$objectType,$text)
     {
-        $query = $this->db->query("INSERT INTO `website_comments` (`character_id`, `object_id`, `object_type`, `content`, `date_posted`) VALUES (".mysql_real_escape_string($characterId).", ".mysql_real_escape_string($objectId).", ".mysql_real_escape_string($objectType).", '".mysql_real_escape_string($text)."', (SELECT NOW()))");
-        if($query->rowCount() > 0){
+        //$query = $this->db->query("INSERT INTO `website_comments` (`character_id`, `object_id`, `object_type`, `content`, `date_posted`) VALUES (".mysql_real_escape_string($characterId).", ".mysql_real_escape_string($objectId).", ".mysql_real_escape_string($objectType).", '".mysql_real_escape_string($text)."', (SELECT NOW()))");
+        $this->db->set("character_id",$characterId);
+        $this->db->set("object_id", $objectId);
+        $this->db->set("object_type",$objectType);
+        $this->db->set("content",$text);
+        $result = $this->db->insert('website_comments');
+        if($result > 0){
             return TRUE;
         }else{
             return FALSE;
@@ -114,8 +119,7 @@ class Comments extends Model
         {
             $result = array();
             $rows = $this->db->fetchAll($query);
-            do
-            {
+            do{
                 $row = $rows->current();
                 $comment = new Comment();
                 $comment->setID($row->id)

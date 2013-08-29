@@ -32,44 +32,48 @@
 			</article>
 		<article>
 		<header>
-		<div class="reply-navigation" id="show-reply">
-			<a href="#"><span>Add a Reply</span></a>
-        </div>
-		<?php        
-        if($hasComments)
-        {
-            foreach($comments as $comment)
-            {
+        <?php
+        if($loggedIn && $activeChar != NULL){
+            echo'<div class="reply-navigation" id="show-reply">
+			         <a href="#"><span>Add a Reply</span></a>
+                 </div>';
+        }
+		      
+        if($hasComments){
+            foreach($comments as $comment){
                 $character = $characters[$comment->getCharacterID()];
                 echo '<div class="comment"><div class="portrait"><div class="avatar-interior">
-                    <a href="#">
-                    <img width="64" height="64" src="http://eu.battle.net/wow/static/images/2d/avatar/'.$character->getRace().'-'.$character->getGender().'.jpg" alt="" />
-                  </a>
-                </div></div><div class="rate"><div class="rate-feedback">
-                    <a href="?login">Login</a> to rate
-                </div>
-                <span class="clear"><!-- --></span>
-            </div>
-            <div class="comment-interior">
-                <div class="character-info user">
-                    <div class="user-name">
-                        <span class="char-name-code" style="display: none">Tayuya</span>
-                            <div class="ui-context">
-                                <div class="context">
-                                    <div class="context-user">
-                                        <strong>Tayuya</strong>
-                                        <br />
-                                        <span>Stormreaver</span>
+                        <a href="#">
+                        <img width="64" height="64" src="http://eu.battle.net/wow/static/images/2d/avatar/'.$character->getRace().'-'.$character->getGender().'.jpg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="rate">
+                        <div class="rate-feedback">';
+                echo $loggedIn ? 'here should be the rating' : '<a href="?login">Login</a> to rate';
+                echo '</div>
+                    <span class="clear"><!-- --></span>
+                    </div>
+                    <div class="comment-interior">
+                        <div class="character-info user">
+                            <div class="user-name">
+                            <span class="char-name-code" style="display: none">'.$character->getName().'</span>
+                                <div class="ui-context">
+                                    <div class="context">
+                                        <div class="context-user">
+                                            <strong>'.$character->getName().'</strong>
+                                            <br />
+                                            <span>Stormreaver</span>
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="#" class="context-link wow-class-'.$character->getClass().'" rel="np">'.$character->getName().'</a>
+                            </div>
+                            <span class="time"><a href="#c-5724142593">'.$comment->getDatePosted().'</a></span>
                         </div>
-                        <a href="#" class="context-link wow-class-11" rel="np">Tayuya</a>
-                    </div>
-                    <span class="time"><a href="#c-5724142593">'.$comment->getDatePosted().'</a></span>
+                    <div class="reply-content">'.$comment->getContent().'</div><br/>
                 </div>
-                <div class="reply-content">Lawl'.$comment->getContent().'</div><br/>
-            </div>
-        </div>';
+            </div>';
             }
         }
         ?>
@@ -77,7 +81,7 @@
             <div class="comment">
                 <div class="portrait-b ajax-update">
                     <div class="avatar-interior">
-                        <a href="#"><img height="64" width="64" src="images/avatars/2d/eagle.gif" alt=""></a>
+                        <a href="#"><img height="64" width="64" src="http://eu.battle.net/wow/static/images/2d/avatar/<?php echo $activeChar->getRace().'-'.$activeChar->getGender() ?>.jpg" alt=""></a>
                     </div>
                 </div>
 														
@@ -85,7 +89,7 @@
                     <div class="character-info user ajax-update">
                     <!--commentThrottle[]-->
                         <div class="user-name">
-                            <a href="#" class="context-link" rel="np">Alex</a>
+                            <a href="#" class="context-link" rel="np"><?php echo $activeChar->getName(); ?></a>
                         </div>
                 </div>
 															

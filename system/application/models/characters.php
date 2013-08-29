@@ -86,16 +86,18 @@ class Characters extends Model
     {
         $this->db->select('name, race, class, gender, level, playerBytes, playerBytes2')->where('guid',$guid);
         $query = $this->db->get('characters');
-        if($query->rowCount() > 0)
-        {   
+        if($query->rowCount() > 0){   
             $row = $this->db->fetch($query);
             $character = new Character($guid);
-            $character->setClass($row->class)
+            $character->setName($row->name)
+                      ->setClass($row->class)
                       ->setGender($row->gender)
                       ->setRace($row->race)
                       ->setLevel($row->level);
                       
             return $character;
+        }else{
+            return NULL;
         }
     }
     
@@ -113,7 +115,7 @@ class Characters extends Model
         if($result->rowCount() > 0){
             return $this->db->fetch($result)->guid;
         }else{
-            return 0;
+            return NULL;
         }
     }
 }
