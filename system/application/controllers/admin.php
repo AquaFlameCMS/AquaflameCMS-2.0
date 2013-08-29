@@ -1,7 +1,6 @@
 <?php
 class Admin extends Controller
 {
-    private $_viewData = array();
     private $_user;
     
     public function __construct()
@@ -14,7 +13,7 @@ class Admin extends Controller
                 header("Location: ".base_url());
             }else{
                 $this->_user = $this->account->getUserById($this->session->userdata('userId'));
-                $this->_viewData['user'] = $this->_user;
+                $this->addViewData('user',$this->_user);
             }
         }else{
             header("Location: ".base_url());
@@ -23,7 +22,7 @@ class Admin extends Controller
     
     public function index()
     {
-        $this->_viewData['subview'] = "partitials/admin_home";
+        $this->addViewData('subview', "partitials/admin_home");
         $this->load->view("layouts/admin",$this->_viewData);
     }
 }

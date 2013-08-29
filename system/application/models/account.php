@@ -45,15 +45,16 @@ class Account extends Model
                 $this->_ID = $row->id;
                 $this->_Username = $username;
                 $this->_email = $row->email;
+                $this->_loginError = 0x01;
             }
             else
             {
-                $this->_loginError = 0x02;
+                $this->_loginError = 0x03;
             }
         }
         else
         {
-            $this->_loginError = 0x01;
+            $this->_loginError = 0x02;
         }
         return $this;
     }
@@ -108,7 +109,7 @@ class Account extends Model
         $result = $this->db->query('INSERT INTO `account` (`username`, `sha_pass_hash`, `email`) VALUES ('.strtoupper($arguments[0]).', "'.$submitedHash.'", '.$arguments[2].')');
         if($result)
         {
-            return 0x00;
+            return 0x01;
         }
         else
         {
@@ -120,7 +121,7 @@ class Account extends Model
             }
             else
             {
-                return 0x01;
+                return 0x03;
             }
         }
     }   

@@ -7,7 +7,7 @@ class Ajax extends Controller
         {
             $this->load->model('account');
             $userLogin = $this->account->checkLogin($this->input->post('username'),$this->input->post('password'));
-            if(!$userLogin->getLastError())
+            if($userLogin->getLastError() == 0x01)
             {
                 $this->session->set_userdata(array("userId" => $userLogin->getID()));
             }

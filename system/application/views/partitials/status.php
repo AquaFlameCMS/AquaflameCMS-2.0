@@ -70,5 +70,4 @@
 			</div>
 			</div>
 			</div>
-			</div><!-- /main_content -->
-        </div>
+			</div>
