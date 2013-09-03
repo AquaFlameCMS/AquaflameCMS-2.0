@@ -15,9 +15,9 @@ p { margin: 0.5em 0 }
 .profiles-search-block .ui-button {position:relative; top:-1px;}
 #sidebar-leaderboards .sidebar-title h3, #sidebar-profiles-search .sidebar-title h3 { font-size: 17px; }
 #sidebar-leaderboards { width: 587px; margin-left: 30px; }
-#sidebar-leaderboards .leaderboard-content-block { background: url("../../images/community/leaderboards-bg.png") repeat 0 0; width: 238px; margin-top: 19px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; padding: 13px 20px 15px 20px; }
-#sidebar-leaderboards .leaderboard-content-block2 { background: url("../../images/community/leaderboards-bg.png") repeat 0 0; width: 238px; margin-top: 5px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; padding: 13px 20px 15px 20px; margin-right: 32px; }
-#sidebar-leaderboards .leaderboard-content-block3 { background: url("../../images/community/leaderboards-bg.png") repeat 0 0; width: 238px; margin-top: -170px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; padding: 13px 20px 15px 20px; }
+#sidebar-leaderboards .leaderboard-content-block { background: url("../../assets/images/status/leaderboards-bg.png") repeat 0 0; width: 238px; margin-top: 19px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; padding: 13px 20px 15px 20px; }
+#sidebar-leaderboards .leaderboard-content-block2 { background: url("../../assets/images/status/leaderboards-bg.png") repeat 0 0; width: 238px; margin-top: 5px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; padding: 13px 20px 15px 20px; margin-right: 32px; }
+#sidebar-leaderboards .leaderboard-content-block3 { background: url("../../assets/images/status/leaderboards-bg.png") repeat 0 0; width: 238px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; padding: 13px 20px 15px 20px; }
 #sidebar-leaderboards #challenge-mode { float: left;}
 #sidebar-leaderboards #pvp-ladder { float: right;}
 #sidebar-leaderboards a.leaderboard-content-title { display: inline-block; font-size: 20px; color: #fab000; background: url("../../images/icons/more-arrows.gif") no-repeat 100% 9px; padding-right: 14px; }
@@ -27,14 +27,28 @@ p { margin: 0.5em 0 }
 #sidebar-leaderboards .group .group-name { display: inline-block; vertical-align:middle; width:180px;}
 #sidebar-leaderboards .group .group-desc { color: #874d25; font-size: 11px; display:block; }
 #sidebar-leaderboards .group a:hover .group-desc { color: #fff; }
-#sidebar-leaderboards .group .group-thumbnail { border: 1px solid #493221; display: inline-block; vertical-align:middle; overflow: hidden; width: 38px; height: 38px; margin: 1px 11px 1px 1px;
-	background-color: #3b1c11; background-image: url("../../images/wiki/zone/thumbnails.png"); background-repeat: no-repeat;
+#sidebar-leaderboards .group .group-thumbnail-up { border: 1px solid #493221; display: inline-block; vertical-align:middle; overflow: hidden; width: 38px; height: 38px; margin: 1px 11px 1px 1px;
+	background-color: #3b1c11; background-image: url("../../assets/images/status/up.png"); background-repeat: no-repeat;
+	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+	-moz-box-shadow: #0d0703 0 0 5px; -webkit-box-shadow: #0d0703 0 0 5px; box-shadow: #0d0703 0 0 5px; }
+#sidebar-leaderboards .group .group-thumbnail-down { border: 1px solid #493221; display: inline-block; vertical-align:middle; overflow: hidden; width: 38px; height: 38px; margin: 1px 11px 1px 1px;
+	background-color: #3b1c11; background-image: url("../../assets/images/status/down.png"); background-repeat: no-repeat;
+	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+	-moz-box-shadow: #0d0703 0 0 5px; -webkit-box-shadow: #0d0703 0 0 5px; box-shadow: #0d0703 0 0 5px; }
+#sidebar-leaderboards .group .group-thumbnail-chars { border: 1px solid #493221; display: inline-block; vertical-align:middle; overflow: hidden; width: 38px; height: 38px; margin: 1px 11px 1px 1px;
+	background-color: #3b1c11; background-image: url("../../assets/images/status/chars.png"); background-repeat: no-repeat;
+	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+	-moz-box-shadow: #0d0703 0 0 5px; -webkit-box-shadow: #0d0703 0 0 5px; box-shadow: #0d0703 0 0 5px; }
+#sidebar-leaderboards .group .group-thumbnail-acc { border: 1px solid #493221; display: inline-block; vertical-align:middle; overflow: hidden; width: 38px; height: 38px; margin: 1px 11px 1px 1px;
+	background-color: #3b1c11; background-image: url("../../assets/images/status/accounts.png"); background-repeat: no-repeat;
 	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
 	-moz-box-shadow: #0d0703 0 0 5px; -webkit-box-shadow: #0d0703 0 0 5px; box-shadow: #0d0703 0 0 5px; }
 #sidebar-leaderboards .group a:hover .group-thumbnail { border: 1px solid #ffb100; }
-#sidebar-leaderboards #pvp-ladder .group .group-thumbnail { background-image: url("../../images/community/arena-thumbnails.jpg"); }
+#sidebar-leaderboards #pvp-ladder .group .group-thumbnail { background-image: url("../../assets/images/status/arena-thumbnails.jpg"); }
 .thumb-gate-of-the-setting-sun { background-position:-3160px 0 }
 .thumb-pvp-overview { background-position: 0 0 }
 .thumb-battlegrounds { background-position: 0 -38px }
 .thumb-arena-2v2, .thumb-arena-3v3, .thumb-arena-5v5 { background-position: 0 -76px }
 .clear { clear: both; display: block; margin: 0; padding: 0; }
+.sidebar-module .sidebar-title { margin-bottom: 6px; border-bottom: 2px solid #552b12; padding-bottom: 6px; }
+

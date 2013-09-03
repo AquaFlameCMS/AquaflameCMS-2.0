@@ -8,16 +8,20 @@
 	                   <h3 class="category title-profiles-search">Servers</h3>
                     </div>
                     <div class="sidebar-content">
-                        <p>Server No.1: Online</p>
-                        <p>Server No.2: Online</p>
-                        <p>Server No.3: Online</p>
-                        <p>Server No.4: Online</p>
-                        <p>Server No.5: Online</p>
-                        <p>Server No.6: Online</p>
-                        <p>Server No.7: Online</p>
+					<div>
+					<label for="type">
+						<strong>Choose your Realm:</strong>
+					</label>
+					<select id="type" name="type">
+					<option value="1">Hellscream</option>
+					<option value="2">Ravencrest</option>
+					<option value="2">Abudabi</option>
+					<option value="2">I AM A REALM!</option>
+					</select>
+					</div>
                     </div>
                 </div>
-                <p class="profiles-tip">Tip: Log in to quickly access your profile.</p>
+                <p class="profiles-tip">Tip: Select the Dropdown window to select your realm.</p>
                 <span class="clear"><!-- --></span>
             </div>
         </div>
@@ -35,8 +39,15 @@
                             <!-- FULL COLUMN -->
                             <div class="group">
                                 <a href="#">
-                                <span class="group-thumbnail thumb-temple-of-the-jade-serpent"></span>
+                                <span class="group-thumbnail-up"></span>
                                 <span class="group-name" style="color: #33FF00;">Online</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>
+							<div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail-down"></span>
+                                <span class="group-name" style="color: #CC0000;">Offline</span>
                                 <span class="clear"><!-- --></span>
                                 </a>
                             </div>
@@ -46,11 +57,18 @@
                             <span class="leaderboard-content-desc">This indicates the status of the Authentication Server. If this crashes you can't login with your account.</span>
                             <div class="group">
                                 <a href="#">
-                                <span class="group-thumbnail thumb-arena-5v5"></span>
+                                <span class="group-thumbnail-down"></span>
                                 <span class="group-name" style="color: #CC0000;">Offline</span>
                                 <span class="clear"><!-- --></span>
                                 </a>
-                            </div>	
+                            </div>
+							<div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail-up"></span>
+                                <span class="group-name" style="color: #33FF00;">Online</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>
                         </div>
                         <div id="challenge-mode" class="leaderboard-content-block2">
                             <a href="#" class="leaderboard-content-title">Characters Online</a>
@@ -58,22 +76,36 @@
                             <!-- FULL COLUMN -->
                             <div class="group">
                                 <a href="#">
-                                <span class="group-thumbnail thumb-temple-of-the-jade-serpent"></span>
+                                <span class="group-thumbnail-chars"></span>
+                                <span class="group-name" style="color: #33FF00;">300 are Online</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>
+							<div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail-chars"></span>
                                 <span class="group-name" style="color: #33FF00;">300 are Online</span>
                                 <span class="clear"><!-- --></span>
                                 </a>
                             </div>
                         </div>
-                        <div id="pvp-ladder" class="leaderboard-content-block3">
+                        <div id="pvp-ladder" class="leaderboard-content-block3" style="margin-top: -220px;">
                             <a href="#" class="leaderboard-content-title">Accounts Online</a>
                             <span class="leaderboard-content-desc">This indicates how many Accounts are currenlty logged in.</span>
                             <div class="group">
                                 <a href="#">
-                                <span class="group-thumbnail thumb-arena-5v5"></span>
+                                <span class="group-thumbnail-acc"></span>
                                 <span class="group-name" style="color: #33FF00;">302 are Online</span>
                                 <span class="clear"><!-- --></span>
                                 </a>
-                            </div>	
+                            </div>
+							<div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail-acc"></span>
+                                <span class="group-name" style="color: #33FF00;">302 are Online</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>
                         </div>
                         <span class="clear"><!-- --></span>
                     </div>
