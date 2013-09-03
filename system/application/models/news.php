@@ -109,7 +109,7 @@ class News extends Model
     
     public function fetchAllNews($limit = 8, $offset = 0)
     {
-        $this->db->select('id, name, content, thumbnailPath, datePosted, author')->order_by("datePosted","desc")->limit($limit,$offset);
+        $this->db->select('id, name, content, thumbnailPath, datePosted, author')->order_by('datePosted',"DESC")->limit($limit,$offset);
         $query = $this->db->get('website_news');
         $result = array();
         if($query->rowCount() > 0)
@@ -135,7 +135,7 @@ class News extends Model
     
     public function fetchHottestNews()
     {
-        $this->db->select('id, name, thumbnailPath')->order_by("visits","desc")->limit(4);
+        $this->db->select('id, name, thumbnailPath')->order_by('visits',"DESC")->limit(4);
         $query = $this->db->get('website_news');
         $result = array();
         if($query->rowCount() > 0)
