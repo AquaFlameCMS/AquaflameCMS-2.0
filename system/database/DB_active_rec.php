@@ -909,20 +909,10 @@ class DB_Active_Record extends DB_Driver
 			$temp = array();
 			foreach (explode(',', $orderby) as $part)
 			{
-				$part = trim($part);
-				if ( ! in_array($part, $this->ar_aliased_tables))
-				{
-					$part = $this->_protect_identifiers(trim($part));
-				}
-				
-				$temp[] = $part;
+				$temp[] = trim($part);
 			}
 			
 			$orderby = implode(', ', $temp);			
-		}
-		else if ($direction != $this->_random_keyword)
-		{
-			$orderby = $this->_protect_identifiers($orderby);
 		}
 	
 		$orderby_statement = $orderby.$direction;
