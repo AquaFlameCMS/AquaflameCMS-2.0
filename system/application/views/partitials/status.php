@@ -1,73 +1,84 @@
-            <div id="main_content">
-			<div id="status">
-			<div class="section-title">
-				<span>Status Page</span>
-			</div>
-				<div class="desc">This page lists all available World of Warcraft realms as well as the status of each. A realm can be listed as either Up or Down. Messages related to realm status and scheduled maintenance will be posted in the Service Status forum. Let us apologize in advance if your Realm is listed as down. Chances are we are working diligently to bring it back online as quickly as possible.</div>
-			<span class="clear"><!-- --></span>
-			<div id="status-blocks">
-			<ul class="tab-menu ">
-				<li>
-				<a href="#" class="tab-active">All Realms</a>
-				<a href="#" class="tab-inactive">Top @ Honor</a>
-				<a href="#" class="tab-inactive">Top @ Conquest</a>
-				<a href="#" class="tab-inactive">Top @ 2v2</a>
-				<a href="#" class="tab-inactive">Top @ 3v3</a>
-				<a href="#" class="tab-inactive">Top @ 5v5</a>
-				</li>
-				</ul>
-			</div>
-			<span class="clear"><!-- --></span>
-			<br /><br /><br />
-			<span class="clear"><!-- --></span>
-			<div id="all-realms">
-			<div class="table full-width">
-			<table>
-			<thead>
-				<tr>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Status</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Realm Name</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Information</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Type</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Population</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Locale</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Online Now</span></a></th>
-				</tr>
-			</thead>
-			<tbody>
-				
-					<tr class="row1">
-						<td class="status" data-raw="up"><div class="status-icon down" onmouseover="Tooltip.show(this, 'Offline')"></div>
-						</td>
-						<td class="name">
-							<a data-tooltip="Click to view the Online Players" href="online.php?realm=1">	 	
-							<font size="2"><h3 class="Chars">Trinity</h3></font>
-							</a>
-						</td>
-						
-						<td class="name">
-							<a href="#">
-								Statistics
-							</a>
-						</td>
-						
-						<td class="type" data-raw="PvP"><span class="PvP">(PvP)</span></td>
-						<td class="population" data-raw="Low"><span class="Low">Low</span></td>
-						<td class="locale">Development</td>
-						<td class="queue" data-raw="false">
-								
-								
-								<div style="margin-top:1px;">
-							<h3 class="chars_range"> 0 Characters</h3></div>
-						</td>
-					</tr>					
-										
-				<tr class="no-results" style="display: none">
-				<td colspan="6">There is not match founds for this parameters.</td>
-				</tr>
-			</tbody>
-			</table>
-			</div>
-			</div>
-			</div>
-			</div>
+<div id="main_content">
+    <div id="left">
+        <div class="profiles">
+	       <h4>Status</h4>
+            <div class="profiles-section">
+                <div class="sidebar-module " id="sidebar-profiles-search">
+                    <div class="sidebar-title">
+	                   <h3 class="category title-profiles-search">Servers</h3>
+                    </div>
+                    <div class="sidebar-content">
+                        <p>Server No.1: Online</p>
+                        <p>Server No.2: Online</p>
+                        <p>Server No.3: Online</p>
+                        <p>Server No.4: Online</p>
+                        <p>Server No.5: Online</p>
+                        <p>Server No.6: Online</p>
+                        <p>Server No.7: Online</p>
+                    </div>
+                </div>
+                <p class="profiles-tip">Tip: Log in to quickly access your profile.</p>
+                <span class="clear"><!-- --></span>
+            </div>
+        </div>
+        <div class="main-feature">
+            <div class="main-feature-wrapper">
+                <!-- LEADERBOARDS -->
+                <div class="sidebar-module " id="sidebar-leaderboards">
+                    <div class="sidebar-title">
+	                   <h3 class="category title-leaderboards">Server Status</h3>
+                    </div>
+                    <div class="sidebar-content">
+                        <div id="challenge-mode" class="leaderboard-content-block">
+                            <a href="#" class="leaderboard-content-title">World Server Status</a>
+                            <span class="leaderboard-content-desc">This indicates the Status of the World Server. If this crashes you can't login to the World.</span>
+                            <!-- FULL COLUMN -->
+                            <div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail thumb-temple-of-the-jade-serpent"></span>
+                                <span class="group-name" style="color: #33FF00;">Online</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="pvp-ladder" class="leaderboard-content-block">
+                            <a href="#" class="leaderboard-content-title">Auth Server Status</a>
+                            <span class="leaderboard-content-desc">This indicates the status of the Authentication Server. If this crashes you can't login with your account.</span>
+                            <div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail thumb-arena-5v5"></span>
+                                <span class="group-name" style="color: #CC0000;">Offline</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>	
+                        </div>
+                        <div id="challenge-mode" class="leaderboard-content-block2">
+                            <a href="#" class="leaderboard-content-title">Characters Online</a>
+                            <span class="leaderboard-content-desc">This indicates how many Players are playing (real-time) in the Server.</span>
+                            <!-- FULL COLUMN -->
+                            <div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail thumb-temple-of-the-jade-serpent"></span>
+                                <span class="group-name" style="color: #33FF00;">300 are Online</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="pvp-ladder" class="leaderboard-content-block3">
+                            <a href="#" class="leaderboard-content-title">Accounts Online</a>
+                            <span class="leaderboard-content-desc">This indicates how many Accounts are currenlty logged in.</span>
+                            <div class="group">
+                                <a href="#">
+                                <span class="group-thumbnail thumb-arena-5v5"></span>
+                                <span class="group-name" style="color: #33FF00;">302 are Online</span>
+                                <span class="clear"><!-- --></span>
+                                </a>
+                            </div>	
+                        </div>
+                        <span class="clear"><!-- --></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,6 +16,7 @@
         <link href="<?php echo base_url();?>assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url();?>assets/stylesheets/main.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url();?>assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url();?>assets/stylesheets/status.css" rel="stylesheet" type="text/css">
    
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
