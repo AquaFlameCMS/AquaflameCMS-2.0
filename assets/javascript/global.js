@@ -34,3 +34,21 @@ $(document).ready(function(){
         });
     });
 });
+
+$(document).ready(function(){
+    $("#realmID").change(function(){
+        var request = $.ajax({
+            url: window.baseUrl + "index.php/ajax/realminfo",
+            type: "POST",
+            data: {id: $("#realmID").val()}
+        });
+        
+        request.done(function(result){
+            $("#world-server-status").html(result);
+        });
+        
+        request.error(function(jqXHR, textStatus, errorThrown){
+            alert("There was an error with selecting the realm. Please try again later");
+        });
+    });
+});

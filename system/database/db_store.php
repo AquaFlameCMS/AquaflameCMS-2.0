@@ -27,7 +27,7 @@ class DB_Store
     {
         include_once(APPPATH.'config/database'.EXT);
         include_once(BASEPATH.'database/pdo'.EXT);
-        include_once(BASEPATH.'database/db_active_rec'.EXT);
+        include_once(BASEPATH.'database/DB_active_rec'.EXT);
         foreach($db as $database)
         {
             if($database['dbdriver'] === "mysql")

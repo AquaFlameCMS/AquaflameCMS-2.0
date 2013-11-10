@@ -9,7 +9,10 @@ class Status extends Controller
     
     public function index()
     {
-        $this->_viewData['subview'] = "partitials/status";
+        $this->load->model("realmlist");
+        $subviewData["realms"] = $this->realmlist->getAllRealms();
+        $this->addViewData('subviewData', $subviewData);
+        $this->addViewData('subview', "partitials/status");
         $this->load->view('layouts/main',$this->_viewData);
     }
 }

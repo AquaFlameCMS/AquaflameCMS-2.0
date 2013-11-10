@@ -118,5 +118,12 @@ class Characters extends Model
             return NULL;
         }
     }
+    
+    public function setCharacterName($userid,$charid,$newname)
+    {
+        $this->db->where('guid',$charid)->where('account',$userid);
+        $result = $this->db->update("characters",array("name" => $name));
+        return $result > 0 ? TRUE : FALSE;
+    }
 }
 ?>

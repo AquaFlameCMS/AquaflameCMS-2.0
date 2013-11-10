@@ -59,6 +59,33 @@ class Ajax extends Controller
             echo 0x03;
         }
     }
+    
+    public function realminfo()
+    {
+        $this->load->model("realmlist");
+        $realmInfo = $this->realmlist->getRealmById($this->input->post('id'));
+        if($realmInfo){
+            if($realmInfo->getOnline()){
+                echo '<div class="group">
+                                    <a href="#">
+                                    <span class="group-thumbnail-up"></span>
+                                    <span class="group-name" style="color: #33FF00;">Online</span>
+                                    <span class="clear"><!-- --></span>
+                                    </a>
+                                </div>';
+            }else{
+                echo '<div class="group">
+                                    <a href="#">
+                                    <span class="group-thumbnail-down"></span>
+                                    <span class="group-name" style="color: #CC0000;">Offline</span>
+                                    <span class="clear"><!-- --></span>
+                                    </a>
+                                </div>';
+            }
+        }else{
+            header("HTTP/1.0 404 Not Found");
+        }
+    }
 }
 
 ?>

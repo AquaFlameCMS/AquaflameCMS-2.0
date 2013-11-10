@@ -91,8 +91,7 @@ class Forums extends Model
         $this->db->select('id,name')->order_by("id","asc");
         $query = $this->db->get('website_forum_categories');
         $result = array();
-        if($query->rowCount() > 1)
-        {
+        if($query->rowCount() > 1){
             $rows = $this->db->fetchAll($query);
             do
             {
@@ -104,18 +103,14 @@ class Forums extends Model
                 $result[] = $category;
             }
             while($rows->next());
-        }
-        else if($query->rowCount() == 1)
-        {
+        }else if($query->rowCount() == 1){
             $row = $this->db->fetch($query);
             $category = new Category();
             $category->setName($row->name)
                      ->setID($row->id);
                         
             $result[] = $category;
-        }
-		else
-		{
+        }else{
 			$category = new Category();
 			$category->setName("error1");
 			$category->setID(0);
@@ -129,8 +124,7 @@ class Forums extends Model
         $this->db->select('id,name,description,icon')->where('category',(int)$category)->order_by("id","asc");
         $query = $this->db->get('website_forum_forums');
         $result = array();
-        if($query->rowCount() > 1)
-        {
+        if($query->rowCount() > 1){
             $rows = $this->db->fetchAll($query);
             do
             {
@@ -143,9 +137,7 @@ class Forums extends Model
                 $result[] = $forum;
             }
             while($rows->next());
-        }
-        else if($query->rowCount() == 1)
-        {
+        }else if($query->rowCount() == 1){
             $row = $this->db->fetch($query);
             $forum = new CForum();
             $forum->setName($row->name)
@@ -153,8 +145,7 @@ class Forums extends Model
                   ->setDesc($row->description)
                   ->setIcon($row->icon);
             $result[] = $forum;
-        }else
-		{
+        }else{
 			$forum = new CForum();
 			$forum->setID(0);
 			$forum->setDesc('There are no forums into this category');

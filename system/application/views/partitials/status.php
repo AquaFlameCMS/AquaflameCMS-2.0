@@ -12,11 +12,13 @@
 					<label for="type">
 						<strong>Choose your Realm:</strong>
 					</label>
-					<select id="type" name="type">
-					<option value="1">Hellscream</option>
-					<option value="2">Ravencrest</option>
-					<option value="2">Abudabi</option>
-					<option value="2">I AM A REALM!</option>
+					<select id="realmID" name="type">
+					<?php
+                    foreach($realms as $realm)
+                    {
+                       echo '<option value="'.$realm->getID().'">'.$realm->getName().'</option>';
+                    }
+                    ?>
 					</select>
 					</div>
                     </div>
@@ -37,19 +39,26 @@
                             <a href="#" class="leaderboard-content-title">World Server Status</a>
                             <span class="leaderboard-content-desc">This indicates the Status of the World Server. If this crashes you can't login to the World.</span>
                             <!-- FULL COLUMN -->
-                            <div class="group">
-                                <a href="#">
-                                <span class="group-thumbnail-up"></span>
-                                <span class="group-name" style="color: #33FF00;">Online</span>
-                                <span class="clear"><!-- --></span>
-                                </a>
-                            </div>
-							<div class="group">
-                                <a href="#">
-                                <span class="group-thumbnail-down"></span>
-                                <span class="group-name" style="color: #CC0000;">Offline</span>
-                                <span class="clear"><!-- --></span>
-                                </a>
+                            <div id="world-server-status">
+                                <?php
+                                if($realms[0]->getOnline()){
+                                    echo '<div class="group">
+                                            <a href="#">
+                                            <span class="group-thumbnail-up"></span>
+                                            <span class="group-name" style="color: #33FF00;">Online</span>
+                                            <span class="clear"><!-- --></span>
+                                            </a>
+                                         </div>';
+                                }else{
+                                    echo '<div class="group">
+                                            <a href="#">
+                                            <span class="group-thumbnail-down"></span>
+                                            <span class="group-name" style="color: #CC0000;">Offline</span>
+                                            <span class="clear"><!-- --></span>
+                                            </a>
+                                        </div>';
+                                }
+                                ?>
                             </div>
                         </div>
                         <div id="pvp-ladder" class="leaderboard-content-block">
